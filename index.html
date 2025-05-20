@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Who Wants to Be a Millionaire</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="start-screen" class="overlay">
+    <h1>Who Wants to Be a Millionaire?</h1>
+    <button id="start-button">Play Game</button>
+  </div>
+
+  <div id="game-screen" class="hidden">
+    <div class="game-title">Who Wants to Be a Millionaire?</div>
+    <div class="main-content">
+      <div class="game-panel">
+        <div id="timer">30</div>
+        <div id="question"></div>
+        <div class="separator"></div>
+        <ul id="answers"></ul>
+        <div class="separator"></div>
+        <div class="lifelines">
+          <button id="fifty">50/50</button>
+          <button id="audience">Ask the Audience</button>
+          <button id="phone">Phone a Friend</button>
+        </div>
+        <div id="status"></div>
+      </div>
+      <div class="money-ladder" id="money-ladder"></div>
+    </div>
+  </div>
+
+  <div id="game-over" class="overlay hidden">
+    <h1 id="game-over-title">Game Over</h1>
+    <p id="final-prize">You won: $0</p>
+    <button id="play-again">Play Again</button>
+  </div>
+
+  <audio id="bgmusic" loop autoplay>
+    <source src="bgmusic.wav" type="audio/wav">
+  </audio>
+  <audio id="correct-sfx">
+    <source src="correct.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="lose-sfx">
+    <source src="oh.wav" type="audio/wav">
+  </audio>
+  <audio id="win-sfx">
+    <source src="yey.wav" type="audio/wav">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
